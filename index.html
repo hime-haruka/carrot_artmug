@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>문의 폼</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="contact-page">
+    <section class="contact-wrap">
+      <div class="section-badge">Q</div>
+
+      <header class="contact-hero">
+        <p class="contact-eyebrow">COMMISSION CONTACT FORM</p>
+        <h1 class="contact-title">문의하기</h1>
+        <p class="contact-desc">
+          원하시는 구성과 분위기를 자세히 적어주시면 더욱 정확한 상담이 가능합니다.
+        </p>
+      </header>
+
+      <section class="notice-box">
+        <div class="notice-chip">공지</div>
+        <div class="notice-content">
+          <p><strong>평균 작업일은 7~14일</strong> 입니다.</p>
+          <p>빠른 마감은 불가능하니 여유를 두고 문의 부탁드립니다.</p>
+        </div>
+      </section>
+
+      <form class="contact-form" id="contactForm">
+        <!-- 1 -->
+        <section class="form-section">
+          <div class="form-section-head">
+            <span class="form-number">1</span>
+            <div>
+              <h2>기본 정보</h2>
+              <p>기본적인 방송 정보와 희망 일정을 입력해주세요.</p>
+            </div>
+          </div>
+
+          <div class="field-grid two">
+            <label class="field">
+              <span class="field-label">방송 닉네임</span>
+              <input
+                type="text"
+                id="nickname"
+                name="nickname"
+                placeholder="예) 당근"
+              />
+            </label>
+
+            <label class="field">
+              <span class="field-label">방송국 주소</span>
+              <input
+                type="text"
+                id="channelUrl"
+                name="channel_url"
+                placeholder="예) https://..."
+              />
+            </label>
+          </div>
+
+          <div class="field-grid one">
+            <label class="field">
+              <span class="field-label">수령 희망일 <small>(선택)</small></span>
+              <input type="date" id="dueDate" name="due_date" />
+            </label>
+          </div>
+        </section>
+
+        <!-- 2 -->
+        <section class="form-section">
+          <div class="form-section-head">
+            <span class="form-number">2</span>
+            <div>
+              <h2>신청 항목</h2>
+              <p>원하시는 작업을 체크해주세요. 중복 선택 가능합니다.</p>
+            </div>
+          </div>
+
+          <div class="check-group-wrap">
+            <article class="check-card">
+              <div class="check-card-top">
+                <h3>데뷔</h3>
+                <span class="check-card-badge">DEBUT</span>
+              </div>
+              <div class="check-list">
+                <label class="check-item">
+                  <input type="checkbox" name="items" value="RT 공개 포스터" />
+                  <span class="check-mark"></span>
+                  <span class="check-text">RT 공개 포스터</span>
+                </label>
+                <label class="check-item">
+                  <input type="checkbox" name="items" value="이벤트 포스터" />
+                  <span class="check-mark"></span>
+                  <span class="check-text">이벤트 포스터</span>
+                </label>
+                <label class="check-item">
+                  <input type="checkbox" name="items" value="썸네일형 포스터" />
+                  <span class="check-mark"></span>
+                  <span class="check-text">썸네일형 포스터</span>
+                </label>
+                <label class="check-item">
+                  <input type="checkbox" name="items" value="캐릭터 로고" />
+                  <span class="check-mark"></span>
+                  <span class="check-text">캐릭터 로고</span>
+                </label>
+              </div>
+            </article>
+
+            <article class="check-card">
+              <div class="check-card-top">
+                <h3>컨텐츠</h3>
+                <span class="check-card-badge">CONTENT</span>
+              </div>
+              <div class="check-list">
+                <label class="check-item">
+                  <input type="checkbox" name="items" value="컨텐츠 포스터" />
+                  <span class="check-mark"></span>
+                  <span class="check-text">컨텐츠 포스터</span>
+                </label>
+                <label class="check-item">
+                  <input type="checkbox" name="items" value="컨텐츠 로고" />
+                  <span class="check-mark"></span>
+                  <span class="check-text">컨텐츠 로고</span>
+                </label>
+                <label class="check-item">
+                  <input type="checkbox" name="items" value="마크 API" />
+                  <span class="check-mark"></span>
+                  <span class="check-text">마크 API</span>
+                </label>
+              </div>
+            </article>
+
+            <article class="check-card">
+              <div class="check-card-top">
+                <h3>유튜브</h3>
+                <span class="check-card-badge">YOUTUBE</span>
+              </div>
+              <div class="check-list">
+                <label class="check-item">
+                  <input type="checkbox" name="items" value="채널아트" />
+                  <span class="check-mark"></span>
+                  <span class="check-text">채널아트</span>
+                </label>
+                <label class="check-item">
+                  <input type="checkbox" name="items" value="썸네일" />
+                  <span class="check-mark"></span>
+                  <span class="check-text">썸네일</span>
+                </label>
+              </div>
+            </article>
+
+            <article class="check-card">
+              <div class="check-card-top">
+                <h3>SOOP</h3>
+                <span class="check-card-badge">SOOP</span>
+              </div>
+              <div class="check-list">
+                <label class="check-item">
+                  <input type="checkbox" name="items" value="상단배너" />
+                  <span class="check-mark"></span>
+                  <span class="check-text">상단배너</span>
+                </label>
+                <label class="check-item">
+                  <input type="checkbox" name="items" value="플로팅배너" />
+                  <span class="check-mark"></span>
+                  <span class="check-text">플로팅배너</span>
+                </label>
+                <label class="check-item">
+                  <input type="checkbox" name="items" value="하단배너" />
+                  <span class="check-mark"></span>
+                  <span class="check-text">하단배너</span>
+                </label>
+                <label class="check-item">
+                  <input type="checkbox" name="items" value="크루(팀)배너" />
+                  <span class="check-mark"></span>
+                  <span class="check-text">크루(팀)배너</span>
+                </label>
+                <label class="check-item">
+                  <input type="checkbox" name="items" value="시그니처 풍선" />
+                  <span class="check-mark"></span>
+                  <span class="check-text">시그니처 풍선</span>
+                </label>
+              </div>
+            </article>
+
+            <article class="check-card full">
+              <div class="check-card-top">
+                <h3>ETC</h3>
+                <span class="check-card-badge">ETC</span>
+              </div>
+              <div class="check-list multi">
+                <label class="check-item">
+                  <input type="checkbox" name="items" value="일정표" />
+                  <span class="check-mark"></span>
+                  <span class="check-text">일정표</span>
+                </label>
+                <label class="check-item">
+                  <input type="checkbox" name="items" value="PPT" />
+                  <span class="check-mark"></span>
+                  <span class="check-text">PPT</span>
+                </label>
+                <label class="check-item">
+                  <input type="checkbox" name="items" value="팬카페" />
+                  <span class="check-mark"></span>
+                  <span class="check-text">팬카페</span>
+                </label>
+                <label class="check-item">
+                  <input type="checkbox" name="items" value="다시보기 썸네일" />
+                  <span class="check-mark"></span>
+                  <span class="check-text">다시보기 썸네일</span>
+                </label>
+                <label class="check-item">
+                  <input type="checkbox" name="items" value="굿즈" />
+                  <span class="check-mark"></span>
+                  <span class="check-text">굿즈</span>
+                </label>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- 3 -->
+        <section class="form-section">
+          <div class="form-section-head">
+            <span class="form-number">3</span>
+            <div>
+              <h2>상세 요청사항</h2>
+              <p>구성, 스타일, 색감, 문구, 참고자료 등을 자세히 적어주세요.</p>
+            </div>
+          </div>
+
+          <div class="field-grid one">
+            <label class="field">
+              <textarea
+                id="detailInput"
+                name="detail"
+                rows="6"
+                placeholder="예) 포인트 컬러 / 넣고 싶은 문구 / 참고 링크 및 참고자료 / 분위기 등을 상세하게 적어주세요."
+              ></textarea>
+            </label>
+          </div>
+        </section>
+
+        <!-- 4 -->
+        <section class="form-section">
+          <div class="form-section-head">
+            <span class="form-number">4</span>
+            <div>
+              <h2>추가금 / 이벤트</h2>
+              <p>해당되는 항목이 있다면 함께 체크해주세요.</p>
+            </div>
+          </div>
+
+          <div class="extra-box">
+            <div class="check-list extra-list">
+              <label class="check-item">
+                <input type="checkbox" name="extra" value="포트폴리오 비공개" />
+                <span class="check-mark"></span>
+                <span class="check-text">포트폴리오 비공개</span>
+              </label>
+              <label class="check-item">
+                <input type="checkbox" name="extra" value="PSD 추가" />
+                <span class="check-mark"></span>
+                <span class="check-text">PSD 추가</span>
+              </label>
+              <label class="check-item">
+                <input type="checkbox" name="extra" value="리뷰 작성 시 1000원 할인" />
+                <span class="check-mark"></span>
+                <span class="check-text">리뷰 작성 시 1,000원 할인</span>
+              </label>
+            </div>
+          </div>
+        </section>
+
+        <div class="action-row">
+          <button type="button" class="action-btn primary" id="copyBtn">
+            양식 복사
+          </button>
+          <button type="button" class="action-btn secondary" id="resetBtn">
+            초기화
+          </button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
