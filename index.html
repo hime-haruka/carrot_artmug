@@ -324,5 +324,6 @@
   <div class="toast" id="toast"></div>
 
   <script src="script.js"></script>
+  <script>(function(){function getHeight(){return Math.max(document.body.scrollHeight,document.documentElement.scrollHeight,document.body.offsetHeight,document.documentElement.offsetHeight,document.body.clientHeight,document.documentElement.clientHeight)}function sendHeight(){const height=getHeight();if(window.parent&&window.parent!==window){window.parent.postMessage({type:'ARTMUG_IFRAME_HEIGHT',height:height},'*')}}function ready(){const height=getHeight();if(window.parent&&window.parent!==window){window.parent.postMessage({type:'ARTMUG_IFRAME_READY',height:height},'*')}}function bind(){window.addEventListener('load',function(){ready();sendHeight();setTimeout(sendHeight,150);setTimeout(sendHeight,400);setTimeout(sendHeight,900)});window.addEventListener('resize',sendHeight);window.addEventListener('message',function(e){if(!e.data)return;if(e.data.type==='ARTMUG_PARENT_READY')sendHeight()});const ro=new ResizeObserver(function(){sendHeight()});ro.observe(document.body);ro.observe(document.documentElement);const mo=new MutationObserver(function(){sendHeight()});mo.observe(document.body,{childList:true,subtree:true,attributes:true,characterData:true})}bind()})();</script>
 </body>
 </html>
